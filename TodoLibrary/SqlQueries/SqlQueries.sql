@@ -1,0 +1,71 @@
+﻿---- Complete Todo Task --
+--create procedure [dbo].[spTodos_CompleteTodo]
+--	@AssignedTo int,
+--	@TodoId int
+--as
+--begin
+--	update dbo.Todos
+--	set IsComplete = 1
+--	where Id = @TodoId
+--		and AssignedTo = @AssignedTo;
+--end
+
+---- Create Todo Task --
+--create procedure [dbo].[spTodos_Create]
+--	@Task nvarchar(50),
+--	@AssignedTo int
+--as
+--begin
+--	insert into dbo.Todos (Task, AssignedTo)
+--	values (@Task, @AssignedTo);
+
+--	select Id, Task, AssignedTo, IsComplete
+--	from dbo.Todos
+--	where Id = scope_identity();
+--end
+
+---- Delete Todo Task --
+--create procedure [dbo].[spTodos_Delete]
+--	@AssignedTo int,
+--	@TodoId int
+--as
+--begin
+--	delete from dbo.Todos
+--	where Id = @TodoId
+--		and AssignedTo = @AssignedTo;
+--end
+
+---- Read all Todo Tasks --
+--create procedure [dbo].[spTodos_GetAllAssigned]
+--	@AssignedTo int
+--as
+--begin
+--	select Id, Task, AssignedTo, IsComplete
+--	from dbo.Todos
+--	where AssignedTo = @AssignedTo;
+--end
+
+---- Read single Todo Task --
+--create procedure [dbo].[spTodos_GetOneAssigned]
+--	@AssignedTo int,
+--	@TodoId int
+--as
+--begin
+--	select Id, Task, AssignedTo, IsComplete
+--	from dbo.Todos
+--	where AssignedTo = @AssignedTo
+--		and Id = @TodoId;
+--end
+
+---- Update Todo Task --
+--create procedure [dbo].[spTodos_UpdateTask]
+--	@Task nvarchar(50),
+--	@AssignedTo int,
+--	@TodoId int
+--as
+--begin
+--	update dbo.Todos
+--	set Task = @Task
+--	where Id = @TodoId
+--		and AssignedTo = @AssignedTo;
+--end
