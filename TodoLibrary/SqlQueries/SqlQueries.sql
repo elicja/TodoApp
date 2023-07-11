@@ -16,8 +16,8 @@
 --	@AssignedTo int
 --as
 --begin
---	insert into dbo.Todos (Task, AssignedTo)
---	values (@Task, @AssignedTo);
+--	insert into dbo.Todos (Task, AssignedTo, IsComplete)
+--	values (@Task, @AssignedTo, 0);
 
 --	select Id, Task, AssignedTo, IsComplete
 --	from dbo.Todos

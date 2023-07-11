@@ -54,8 +54,8 @@ public class AuthenticationController : ControllerBase
         claims.Add(new(JwtRegisteredClaimNames.FamilyName, user.LastName));
 
         var token = new JwtSecurityToken(
-            _config.GetValue<string>("AuthenticationController:Issuer"),
-            _config.GetValue<string>("AuthenticationController:Audience"),
+            _config.GetValue<string>("Authentication:Issuer"),
+            _config.GetValue<string>("Authentication:Audience"),
             claims,
             DateTime.UtcNow,
             DateTime.UtcNow.AddMinutes(1),
